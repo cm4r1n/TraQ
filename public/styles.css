@@ -1,0 +1,284 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+:root {
+  /*ACI THEME*/
+  --ebony:    #09111a;
+  --codGrey:  #0e0e0e;
+  --darkr:    #1d1d1d;
+  --dark:     #424242;
+  --grey:     #808080;
+  --light:    #f5f5f5;
+
+  --pink:     #ff0883;
+  --green:    #83ff08;
+  --orange:   #ff8308;
+  --blue:     #0883ff;
+  --purple:   #8308ff;
+  --aqua:     #08ff83;
+  --p-red:    #e98da3;
+  --p-green:  #a3e9d8;
+  --p-yellow: #e9d48d;
+  --p-blue:   #8da3e9;
+  --p-purple: #d48de9;
+  --p-aqua:   #8de9d4;
+
+  --h1-title: clamp(1.5rem, calc(1.04rem + 2.28wm), 2.81rem);
+  --h2-title: clamp(1.35rem, calc(1.17rem + 0.91wm), 1.88rem);
+  --h3-title: clamp(1.25rem, calc(0.90rem + 1.74wm), 2.25rem);
+  --h4-title: clamp(1.13rem, calc(0.99rem + 0.65wm), 1.50rem);
+
+  --fs16: 1rem;
+  --fs18: 1.125rem;
+  --fs24: 1.5rem;
+  --fs32: 2rem;
+  --fs40: 2.5rem;
+  --fs48: 3rem;
+  --fs72: 4.5rem;
+  --fs88: 5.5rem;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  margin-left: 0;
+  background: var(--codGrey);
+  font-family: 'Poppins';
+  color: var(--grey);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--p-aqua);
+  font-size: var(--h1-title);
+}
+
+/*-----| TOPBAR |-----*/
+header {
+  margin: auto;
+  position: fixed;
+  height: 3rem;
+  background: var(--darkr);
+  top: 0;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header_namespace {
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.header_namespace i {
+  margin: .5rem;
+  color: var(--p-red);
+  align: center;
+  width: 3rem;
+}
+
+
+.searchBox {
+  align-items: center;
+}
+
+.userBox {
+  align-items: center;
+}
+
+.userBox a{
+  margin: .5rem;
+  color: var(--light);
+}
+
+.userBox a:hover{
+  color: var(--p-purple);
+}
+
+/*-----| SIDEBAR |-----*/
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 3rem;
+  top: 3rem;
+  height: 100vh;
+  background: var(--darkr);
+  color: var(--grey);
+
+}
+
+.sb-link {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  font-size: var(--fs18);
+  height: 3rem;
+}
+
+.sb-option {
+  font-size: 14px;
+  display: none;
+}
+
+.sb-link:hover {
+  color: var(--light);
+}
+
+.sb-link:hover .sb-option {
+  background: var(--codGrey)
+}
+
+.sb-link:hover .sidebar {
+  width: 15rem;
+}
+
+/*-----| CONTENT COMPONENT |-----*/
+.content {
+  display: flex;
+  margin: 5rem;
+  padding: 1rem;
+  min-height: 80vh;
+}
+
+/*-----| CARD COMPONENT |-----*/
+.card {
+  border: 1px solid var(--darkr);
+  border-radius: 10px;
+  background: var(--darkr);
+  color: var(--light);
+  min-width: 20em;
+  max-width: 24em;
+  padding: 1rem;
+  margin: .5rem;
+  height: fit-content;
+}
+
+.card:hover {
+  border: 1px solid var(--dark);
+}
+
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle p {
+  font-size: 12px;
+  text-align: right;
+  height: 20px;
+  margin:0;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--dark);
+}
+
+.cardForm {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cardPrior {
+  width: 2rem;
+  color: var(--dark);
+  border: 0;
+  text-align: center;
+}
+
+.cardBtn {
+  color: var(--p-purple);
+  border: 0;
+}
+
+.cardTools {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.toolBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 8rem;
+  color: var(--dark);
+}
+
+.toolClip {
+  color: var(--dark);
+  display: flex;
+  justify-content: space-around;
+}
+
+.toolClip:hover {
+  color: var(--light);
+}
+
+.toolBar i:hover {
+  color: var(--light);
+}
+
+/*-----| LOGIN |-----*/
+.loginBox {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.loginForm {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm input {
+  width: 25em;
+  height: 2rem;
+  border: 0;
+  margin: .125rem;
+  font-size: var(--fs18);
+  text-align: center;
+  color: var(--light);
+  background: var(--darkr);
+}
+
+.loginForm button {
+  width: 20rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 10px;
+  margin: .5;
+  color: var(--darkr);
+  background: var(--p-aqua);
+  text-align: center;
+  font-size: var(--fs18);
+  font-weight: bold;
+}
+
+/*-----| FOOTER |-----*/
+footer {
+  height: 3rem;
+  margin-top: auto;
+}
